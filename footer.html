@@ -1,0 +1,124 @@
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Left Section -->
+        <div class="footer-column">
+            <h3>UCSD FIJI</h3>
+            <p>helping build the excellent men of tomorrow</p>
+        </div>
+
+        <!-- Middle Section: Newsletter Signup -->
+        <div class="footer-column">
+            <p style = "font-family: CustomFont; font-size: 13px; font-style: italic; color:#500878">are you an alumni looking to reconnect?</p>
+            <h3>Join our mailing list!</h3>
+            <form action="#" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <!-- Right Section: Quick Links -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="scholarship.html">Scholarship</a></li> -->
+                <li><a href="philanthropy.html">Philanthropy</a></li>
+                <li><a href="recruitment.html">Recruitment</a></li>
+                <li><a href="alumni.html">Alumni</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 UCSD FIJI. All rights reserved.</p>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 20px 0;
+        text-align: center;
+        font-family:"CenturyGothic";
+    }
+
+    .footer-container {
+        /* padding-top: 10px; */
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 30%px;
+        margin: 0 auto;
+
+    }
+
+    .footer-column {
+        display: flex;             /* 1) Turn .footer-column into a flex container */
+        flex-direction: column;    /* 2) Stack items vertically */
+        justify-content: center;   /* 3) Vertically center the items */
+        align-items: center;       /* 4) Horizontally center the items */
+
+        /* Existing styles */
+        flex: 1;
+        padding: 10px;
+        min-width: 200px;
+    }
+
+    .footer-column h3 {
+        margin-bottom: 10px;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-column ul li {
+        margin: 5px 0;
+    }
+    .footer-column ul li a {
+    color: #500878;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+    display: inline-block; /* Ensures transform works properly */
+    }
+
+    .footer-column ul li a:hover {
+        transform: scale(1.1); /* Slightly increase size on hover */
+    }
+
+    
+
+    .footer-column form input {
+        padding: 8px;
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .footer-column form button {
+        font-family:"CenturyGothic";
+        padding: 8px 12px;
+        background-color: #500878;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+        display: inline-block; /* Ensures transform works properly */
+    }
+
+    .footer-column form button:hover {
+        transform: scale(1.1); /* Slightly increase size on hover */
+
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        font-size: 14px;
+        border-top: 1px solid #c0c0c0;
+        padding-top: 10px;
+        vertical-align: middle;
+    }
+</style>

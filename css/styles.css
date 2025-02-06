@@ -1,0 +1,438 @@
+/* Basic Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'CustomFont'; /* Default to Arial if font isn't loaded */
+    background-color: #f8f8f8; /* Light neutral background */
+    color: #000000; /* Black text as default */
+}
+    
+/* Colors */
+:root {
+    --primary-color: #500878; /* Phi Gamma Delta Purple */
+    --secondary-color: #dba900; /* Pantone Yellow 110c */
+    --black-color: #000000;
+    --dark-grey-color: #454545;
+    --medium-grey-color: #786d6e;
+    --white-color: #ffffff;
+}
+
+/* Styling for body and common elements */
+body {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 4px solid #dba900;
+
+}
+
+
+.navbar-image {
+    position: absolute; /* Position the image relative to the navbar */
+    height: 300px; /* Set a fixed height */
+    width: auto; /* Maintain aspect ratio */
+    top: 4%; /* Align vertically to the navbar */
+    transform: translateY(-25px); /* Adjust for vertical centering */
+    left: 0px; /* Position the image to hang off the right edge */
+    z-index: 0; /* Place the image behind navbar content */
+    pointer-events: none; /* Prevent the image from interfering with link clicks */
+}
+
+nav {
+    z-index: 4;
+}
+
+/* Links */
+nav a {
+    margin: 0 15px;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+
+/* Buttons */
+button {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'CustomFont', Arial, sans-serif;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-grey-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Custom Fonts */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../assets/fonts/TrajanPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'CenturyGothic';
+    src: url('../assets/fonts/CenturyGothic.ttf') format('truetype');
+}
+.ucsd-seal {
+    mix-blend-mode: normal !important; /* Force normal blend mode for the image */
+    z-index: 3; /* Ensure it's above the text */
+    position: relative; /* Keeps the image relative to its container */
+}
+
+.parallax {
+    background-image: url('../images/IMG_4242.jpg'); /* Replace with your image path */
+    height: 80vh; /* Full-screen height */
+    background-attachment: fixed; /* Enables the parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-text  {
+    position: absolute; /* Position text layer over the image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -115%); /* Perfect centering */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    z-index: 2; /* Ensure it stays above the background */
+    font-family: 'CustomFont', Arial, sans-serif;
+    mix-blend-mode: difference;
+    line-height: 30px;
+
+}
+.parallax-img  {
+    position: absolute; /* Position text layer over the image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -240%); /* Perfect centering */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    z-index: 2; /* Ensure it stays above the background */
+    font-family: 'CustomFont', Arial, sans-serif;
+    mix-blend-mode: normal;
+}
+
+
+/* Row Container */
+.row {
+    display: flex; /* Makes the child elements (columns) align side-by-side */
+    /* justify-content: ;  */
+    text-align: center;
+    margin: 0px; /* Adds space around the row */
+    /* padding: 3px; */
+    /* max-width: 100%; */
+    box-sizing: border-box;
+    background-clip: padding-box; /* Ensures the background includes padding */
+
+}
+
+/* Column Style */
+.column {
+    flex: 1; /* Makes all columns take equal space */
+    margin: 0px; /* Adds space between the columns */
+    padding: 5px; /* Adds padding inside each column */
+    border-radius: 0; /* Optional: rounded corners for a polished look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
+    background-clip: padding-box; /* Ensures the background includes padding */
+
+}
+
+.column h1, .column h2 {
+    margin: 10px 0; /* Adds spacing between the headers */
+}
+
+.info-box {
+    font-family: 'CenturyGothic'; /* Replace with your desired font */
+    font-size: 18px; 
+    text-align: left; 
+    padding-left: 20%; 
+    padding-right: 20%; 
+    /* padding-top: 20px;  */
+    padding-bottom: 20px;
+    line-height: 1.6;
+    color: #333; /* Text color */
+    /* background-color: #; Optional: Light background for the container */
+    /* border-radius: 10px; Optional: Rounded corners for a modern look */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); Optional: Subtle shadow */
+    margin: 20px auto; /* Center the div on the page */
+    max-width: 800px; /* Limit the maximum width of the div */
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: inherit; /* Inherit color from specific column class */
+}
+
+.history {
+    background-color: #500878;
+    /* background-color: #500878; */
+        color: white;
+}
+
+.recruitment {
+    background-color: #454545;
+    color: white;
+
+}
+
+.alumni {
+    background-color: #dba900;
+    color: black;
+}
+
+.column h1,
+.column h5 {
+    margin: 5px;
+    transition: transform 0.3s ease;
+}
+
+.column:hover {
+    opacity: 0.9;
+    /* transform: scale(1.01); */
+}
+
+.column:hover h1,
+.column:hover h5 {
+    transform: scale(1.01);
+    transform-origin: center;
+
+}
+
+/* Hover background color changes */
+.history:hover {
+    background-color: #6a1e9a;
+}
+
+.recruitment:hover {
+    background-color: #000000;
+
+}
+
+.alumni:hover {
+    background-color: #f3c700;
+
+}
+
+.support {
+    color: white;
+}
+
+.support h1{ 
+    font-family: 'CustomFont';
+}
+.support p{
+    font-family: "CenturyGothic";
+    color: white;
+    font-size: 25px;
+    margin-left: 20%;
+    margin-right: 20%;
+    transform: translate(0, -30%);
+    /* font-weight: bold; */
+    font-style: italic;
+
+}
+
+.support .button {
+    background-color: #500878;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.support .button:hover {
+    background-color: #6a1e9a; /* Background color change */
+    transform: scale(1.05); /* Slight size increase */
+    color: white; /* Optional: Text color change */
+    opacity: 0.9; /* Slight fade effect */
+}
+
+
+.about-section {
+    max-width: 80%;
+    margin: 0 auto; /* Center the main text */
+    font-size: 18px; /* Larger font size */
+    text-align: left;
+    /* font-family: 'CenturyGothic'; */
+    color: black;
+    
+}
+
+.about-section p {
+    margin-bottom: 20px;
+    position: relative;
+    color: black;
+    font-family: 'CenturyGothic';
+    font-size: 18px;
+    font-weight: normal;
+
+}
+
+.image-left,
+.image-right {
+    width: 40%;
+    /* max-width: 300px; */
+    margin: 10px;
+    margin-left: 0px;
+}
+
+.image-left {
+    float: left;
+    margin-right: 20px;
+}
+
+.image-right {
+    float: right;
+    margin-left: 20px;
+}
+
+.image-left img,
+.image-right img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
+}
+
+.fact-box-right {
+    float: right;
+    width: 40%;
+    max-width: 300px;
+    margin-left: 20px;
+    padding: 15px;
+    border: 2px solid #500878;
+    border-radius: 8px;
+    background-color: #ae88ca41;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
+}
+
+.fact-box-right h3 {
+    margin-top: 0;
+    color: #500878;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.spacer{
+    height: 30px;
+    background-color: #500878;
+    width:100%;
+}
+
+.spacer .top{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.spacer .bottom{
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+/* by the numbers */
+
+.by-the-numbers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 40%; */
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* margin-top: 40px; */
+    background-color:#cbcbcb5c ;
+    /* border */
+    /* border-top-width: 20px; */
+    border-top-color: #500878;
+    border-bottom-width: 20px;
+    border-bottom-color: #500878;
+    /* -webkit-border-image: fill; */
+    /* color: white; */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 15px;
+    width: 80%;
+    padding: 20px;
+    /* background: white; */
+    border-radius: 10px;
+    
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+
+.grid-item-invis {
+    display: flex;
+    align-items: center;
+    vertical-align: bottom;
+    /* background: #e0e0e0; */
+    /* padding: 15px; */
+    /* border-radius: 8px; */
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    /* background: #cbcbcb5c; */
+    /* background-color:#cbcbcb5c ; */
+    padding: 15px;
+    border-radius: 8px;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+
+}
+
+.large-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 10px;
+    max-width: fit-content;
+    min-width: 15%;
+}
+
+.small-text {
+    font-size: 1rem;
+    flex: 1;
+    max-width: 50%;
+    color: rgba(0, 0, 0, 0.6);
+}
