@@ -104,7 +104,7 @@ footer {
 }
 
 .parallax {
-    background-image: url('/images/IMG_4242.jpg');
+    background-image: url('../images/IMG_4242.jpg');
     height: 80vh; /* Full-screen height */
     background-attachment: fixed; /* Enables the parallax effect */
     background-position: center;
